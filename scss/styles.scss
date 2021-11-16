@@ -8,8 +8,13 @@ $medium: 900px;
 $big:1200px;
 $desktop:1824px;
 
+$colorPrincipal:rgb(26, 26, 83); 
+$colorSecundario:rgb(155, 154, 154); 
 
-
+/* background: rgb(43,43,45);
+background: linear-gradient(-90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
+ */
+ 
 
 body{
     margin: 0;
@@ -45,7 +50,7 @@ body{
     }
     .card{    
         color: black;
-        padding: 5px;    
+        padding: 50px 20px;    
         display: flex;
         position: relative;     
         flex-direction: column;
@@ -54,7 +59,7 @@ body{
         width: 70%;
         max-width: 60vw;  
         border-radius: 1%; 
-        height: 80vh;     
+        min-height: 70vh;     
         margin:30px auto;    
         background-color: transparent;
         transition: all 1s;
@@ -81,7 +86,6 @@ body{
             height: 300px;
             position: relative;
             display: flex;
-            top: -40px;
             justify-content: center;
             align-items: center;
             @media screen and (max-width: $small) {        
@@ -90,14 +94,15 @@ body{
             }
             .card-video{
                 margin: auto;
-                width: 80%;
+                transition: .1s;
+               width: 100%; 
                 height: 100%;
                 border-radius: 10px;
                 transition: .6s;    
-
+                max-width: 550px;
                 &:hover{
-                    transform: scale(1.35);
-                    transition: 1s;
+                    filter: contrast(70%);
+                    transition: .1s;
                     z-index: 999;
                     box-shadow: none;                    
                 }
@@ -111,6 +116,7 @@ body{
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
+            margin-top: 10px;
             @media screen and (max-width: $small) {        
                 flex-direction: column; 
             }
@@ -129,11 +135,9 @@ body{
                 border-radius: 10px;
                 margin-top: 5px;
                 background-color: rgba(49, 52, 61, 0.644);
-                &:hover{
-                    color: white;
-                    background-color: rgba(0, 0, 0, 0.493);
-                    border-bottom: none;
-                    border-radius: 8px;
+                &:hover{                    
+                    background-color: white;
+                    color: $colorPrincipal;
                 }
             }
             .link-documentacion{       
@@ -146,7 +150,8 @@ body{
                 flex-direction: row;   
                 
                 &:hover{                    
-                    box-shadow: 0px 0px 20px 5px rgb(228, 88, 88);
+                    background-color: white;
+                    color: $colorPrincipal;
                 }
                 img{
                     width: 32px;
@@ -223,7 +228,7 @@ body{
         justify-content: center;
         align-items: center;
         color: black;
-        border: 2px solid rgb(255, 209, 5);
+        border: 2px solid $colorPrincipal;
         border-radius: 5px;
         padding: 5px;
         background-color: rgba(196, 192, 192, 0.848);
@@ -247,15 +252,20 @@ body{
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    background-color: rgb(255, 209, 5);
+    border: 2px solid $colorPrincipal;
     position: fixed;
-    background: linear-gradient(rgb(255, 209, 5) 30%, rgb(236, 157, 11) 80%);
+    background-color:rgba(196, 192, 192, 0.848) ;
     min-width: 180px;
-    border-radius: 25px;
-    top: 100px;
+   
+    border-radius: 5px;
+    bottom: 20px;
     right: 20px;
     margin-right: 20px;
     padding: 8px 4px;
+    &:hover{
+       cursor: pointer;
+        background-color: rgba(117, 114, 114, 0.548);
+    }
     @media screen and (max-width: $small) {        
         position: relative;
         margin: auto;
@@ -263,10 +273,14 @@ body{
      }
     a{
         color: transparent;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
     }
     img{
         margin: 0px 10px;
-        width: 35px;    
+        width: 35px; 
         height: 35px;
         @media screen and (max-width: $small) {        
             width: 40px;    
@@ -275,7 +289,6 @@ body{
         &:hover{
             animation:  girarContacto 10s infinite forwards;
             animation-delay: .5s;
-            background-color: rgba(255, 255, 255, 0.493);
         }
     }
     
