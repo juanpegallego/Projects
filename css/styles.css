@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap");
-/* background: rgb(43,43,45);
-background: linear-gradient(-90deg, rgba(43,43,45,1) 36%, rgb(32, 45, 94) 90%);
- */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -57,9 +55,8 @@ body {
           width: 100%;
           max-width: initial;
           margin-top: 20px; } }
-    body .main-container .card-title {
+    body .main-container .card-title h2 {
       position: relative;
-      top: -50px;
       text-align: center;
       font-size: 2rem;
       text-shadow: 0px 0px 30px white;
@@ -77,10 +74,9 @@ body {
           height: initial; } }
       body .main-container .container-video-link .card-video {
         margin: auto;
-        transition: .1s;
         width: 100%;
         height: 100%;
-        border-radius: 10px;
+        border-radius: 5px;
         transition: .6s;
         max-width: 550px; }
         body .main-container .container-video-link .card-video:hover {
@@ -88,6 +84,13 @@ body {
           transition: .1s;
           z-index: 999;
           box-shadow: none; }
+      body .main-container .container-video-link p {
+        font-size: .9rem;
+        width: 50%;
+        margin-left: 20px;
+        font-weight: light;
+        font-family: Orbitron, sans-serif;
+        line-height: 25px; }
     body .main-container .link-container {
       width: 100%;
       top: 10px;
