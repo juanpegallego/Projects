@@ -93,6 +93,7 @@ body{
             @media screen and (max-width: $small) {        
                 width: 100%;
                 height: initial;
+                flex-direction: column;
             }
             .card-video{
                 margin: auto;
@@ -115,6 +116,10 @@ body{
                 font-weight: light;
                 font-family: Orbitron, sans-serif;   
                 line-height: 25px;
+                padding: 10px;
+                @media screen and (max-width: $small) {        
+                    width: 100%;
+                }
             }      
         }
         .link-container{

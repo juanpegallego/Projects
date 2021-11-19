@@ -71,7 +71,8 @@ body {
       @media screen and (max-width: 600px) {
         body .main-container .container-video-link {
           width: 100%;
-          height: initial; } }
+          height: initial;
+          flex-direction: column; } }
       body .main-container .container-video-link .card-video {
         margin: auto;
         width: 100%;
@@ -90,7 +91,11 @@ body {
         margin-left: 20px;
         font-weight: light;
         font-family: Orbitron, sans-serif;
-        line-height: 25px; }
+        line-height: 25px;
+        padding: 10px; }
+        @media screen and (max-width: 600px) {
+          body .main-container .container-video-link p {
+            width: 100%; } }
     body .main-container .link-container {
       width: 100%;
       top: 10px;
