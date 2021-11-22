@@ -218,7 +218,7 @@ body{
         color: white;
         margin: auto;
         min-height: 50vh;
-        top: 20px;
+        top: 50px;
         left: initial;
      }
     h1{
@@ -283,6 +283,7 @@ body{
     @media screen and (max-width: $small) {        
         position: relative;
         margin: auto;
+        top: 30px;
         right:  initial;
      }
     a{
@@ -320,6 +321,12 @@ body{
     top:40px;
     right: 40px;
     margin: auto;
+    @media screen and (max-width: $small) {        
+        position: relative;
+        margin: auto;
+        top: -350px;
+        right: initial;
+     }
     a{
         
         margin: 0px 5px;

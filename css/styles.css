@@ -170,7 +170,7 @@ body {
       color: white;
       margin: auto;
       min-height: 50vh;
-      top: 20px;
+      top: 50px;
       left: initial; } }
   .title-container h1 {
     font-size: 1.7rem; }
@@ -225,6 +225,7 @@ body {
     .data-container {
       position: relative;
       margin: auto;
+      top: 30px;
       right: initial; } }
   .data-container a {
     color: transparent;
@@ -253,6 +254,12 @@ body {
   top: 40px;
   right: 40px;
   margin: auto; }
+  @media screen and (max-width: 600px) {
+    .language-container {
+      position: relative;
+      margin: auto;
+      top: -350px;
+      right: initial; } }
   .language-container a {
     margin: 0px 5px;
     border: 2px solid white;
