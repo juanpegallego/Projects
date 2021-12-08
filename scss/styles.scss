@@ -27,12 +27,11 @@ body{
     overflow-X: hidden;
     flex-direction: column;
     font-size: 10px;   
-    background: rgb(76,76,83);
-    background: linear-gradient(90deg, rgba(76,76,83,1) 29%, rgba(123,127,142,1) 90%);
+    
   
 
 .main-container{
-    top: 120px;
+    top: 50px;
     background-color: transparent;
     position: relative;
     width: 70%;    
@@ -42,14 +41,14 @@ body{
     justify-content: center;
     align-items: center; 
     z-index: 2;
+    padding-bottom: 80px;
     @media screen and (max-width: $small) {        
         width: 100%;
         margin-top: 100px;
         top: 0px;
     }
     .card{    
-        color: black;
-        padding: 50px 20px;    
+        color: black;   
         display: flex;
         position: relative;     
         flex-direction: column;
@@ -65,7 +64,6 @@ body{
         background-attachment: fixed; 
         background-size: contain;
         background-blend-mode: darken;
-        background-color: rgb(202, 200, 200);
         @media screen and (max-width: $small) {        
             width: 100%;
             max-width: initial;
@@ -77,17 +75,21 @@ body{
                 position: relative;
                 text-align: center;
                 font-size: 2rem;
-                text-shadow: 0px 0px 30px white;
+                text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.445);
                 text-decoration: underline;
                 font-family: Orbitron, sans-serif;   
-                
+                z-index: 1;
+                color: white;
+                top: -100px;
             }
             
         }
         .container-video-link{
-            height: 300px;
-            position: relative;
+            position: absolute;
+            width: 100%;
+            height: 100%;
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             @media screen and (max-width: $small) {        
@@ -98,25 +100,25 @@ body{
             .card-video{
                 margin: auto;
                 width: 100%; 
+                left: 0px;
+                height: 0px;
                 height: 100%;
                 border-radius: 5px;
-                transition: .6s;    
-                max-width: 550px;
-                &:hover{
-                    filter: contrast(70%);
-                    transition: .1s;
-                    z-index: 999;
-                    box-shadow: none;                    
-                }
+                transition: .6s;   
+                z-index: 0;
+                filter: contrast(50%) blur(1px);
+                border-radius: 1rem;
             }   
             p{
                 font-size: .9rem;
-                width: 50%;
-                margin-left: 20px;
+                width: 100%;
                 font-weight: light;
                 font-family: Orbitron, sans-serif;   
                 line-height: 25px;
-                padding: 10px;
+                margin-top: 20px;
+                bottom: -80px;
+                position: absolute;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.322);
                 @media screen and (max-width: $small) {        
                     width: 100%;
                 }
@@ -124,13 +126,14 @@ body{
         }
         .link-container{
             width: 100%;
-            top: 10px;
-            position: relative;
+            bottom: 80px;
+            position: absolute;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
             margin-top: 10px;
+            z-index: 99;
             @media screen and (max-width: $small) {        
                 flex-direction: column; 
             }
@@ -145,27 +148,26 @@ body{
                 font-size: 1.2rem;
                 text-decoration: none;     
                 padding: 0px 10px 0px 10px;  
-                color: white;
+                
                 border-radius: 10px;
                 margin-top: 5px;
-                background-color: rgba(49, 52, 61, 0.644);
+                color: $colorPrincipal;
+                background-color: white;
                 &:hover{                    
-                    background-color: white;
-                    color: $colorPrincipal;
+                    
+                    color: white;
+                    background-color: rgba(49, 52, 61, 0.644);
                 }
             }
-            .link-documentacion{       
-                color: white;
+            .link-documentacion{    
                 height: 40px;
-                display: flex;
-                color: white;
+                display: flex;                
                 justify-content: center;  
                 align-items: center;
                 flex-direction: row;   
-                
+                color: $colorPrincipal;
                 &:hover{                    
-                    background-color: white;
-                    color: $colorPrincipal;
+                    color: white;
                 }
                 img{
                     width: 32px;
@@ -207,7 +209,7 @@ body{
     top: 20px;
     width: 250px;
     left: 20px;
-    color: white;
+    color: $colorPrincipal;
     font-family: Orbitron;
     display: flex;
     justify-content: center;
@@ -269,8 +271,7 @@ body{
     border: 2px solid $colorPrincipal;
     position: fixed;
     background-color:rgba(196, 192, 192, 0.848) ;
-    min-width: 180px;
-   
+    min-width: 180px;   
     border-radius: 5px;
     bottom: 20px;
     right: 20px;
@@ -330,14 +331,15 @@ body{
     a{
         
         margin: 0px 5px;
-        border: 2px solid white;
+        border: 2px solid $colorPrincipal;
         border-radius: 5px;
         padding: 3px 6px;
         font-size: 1.2rem;
         text-decoration: none;
-        color: white;
+        color: $colorPrincipal;
+        
         &:hover{
-            background-color: white;
+            background-color:rgba(196, 192, 192, 0.848) ;
             color: black;
             transition: .4s;
         }        
